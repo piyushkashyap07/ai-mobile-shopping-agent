@@ -7,15 +7,15 @@ AI-powered mobile phone shopping assistant that helps customers discover, compar
 ## 📸 Screenshots
 
 ### Landing Page
-![Landing Page](screenshots/landing-page.png)
+![Landing Page](screenshots/landing-page.png.jpg)
 *Welcome screen with email input to start chatting*
 
 ### Chat Interface
-![Chat Interface](screenshots/chat-interface.png)
+![Chat Interface](screenshots/chat-interface.png.jpg)
 *Clean, modern chat interface with conversation history*
 
 ### Product Recommendations
-![Product Recommendations](screenshots/product-recommendations.png)
+![Product Recommendations](screenshots/product-recommendations.png.jpg)
 *AI-powered recommendations with detailed specifications*
 
 ## 📊 Dataset
