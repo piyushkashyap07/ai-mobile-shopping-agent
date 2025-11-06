@@ -4,6 +4,39 @@ AI-powered mobile phone shopping assistant that helps customers discover, compar
 
 **Repository**: [https://github.com/piyushkashyap07/ai-mobile-shopping-agent](https://github.com/piyushkashyap07/ai-mobile-shopping-agent)
 
+## 📸 Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing-page.png)
+*Welcome screen with email input to start chatting*
+
+### Chat Interface
+![Chat Interface](screenshots/chat-interface.png)
+*Clean, modern chat interface with conversation history*
+
+### Product Recommendations
+![Product Recommendations](screenshots/product-recommendations.png)
+*AI-powered recommendations with detailed specifications*
+
+## 📊 Dataset
+
+This project uses the **Mobiles Dataset (2025)** from Kaggle:
+
+🔗 **Dataset Source**: [Mobiles Dataset (2025) on Kaggle](https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025)
+
+The dataset contains **930+ mobile phone records** with comprehensive specifications including:
+- Company and model names
+- RAM, Storage, Processor details
+- Camera specifications (front & back)
+- Battery capacity
+- Screen size and weight
+- Launch prices in multiple currencies (with focus on Indian Rupees)
+- Launch year
+
+The dataset has been converted from CSV to JSON format (`mobile_phones_data.json`) for efficient querying and is included in this repository.
+
+**Dataset Credits**: Created by [abdulmalik1518](https://www.kaggle.com/abdulmalik1518) on Kaggle
+
 ## 🎯 Project Overview
 
 This project implements a conversational AI shopping agent specifically designed for the Indian mobile phone market. The agent uses advanced prompt engineering techniques to:
@@ -150,6 +183,8 @@ MOBILE_DATA_JSON_PATH=mobile_phones_data.json
 #### Data File
 
 Ensure `mobile_phones_data.json` is in the project root. This file contains 930+ mobile phone records with specifications.
+
+**Note**: The dataset is sourced from [Kaggle - Mobiles Dataset (2025)](https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025) and has been converted to JSON format for this project.
 
 #### Run Backend Server
 
@@ -454,6 +489,7 @@ This project addresses all evaluation criteria:
 
 ## 🙏 Acknowledgments
 
+- **Dataset**: [Mobiles Dataset (2025)](https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025) by [abdulmalik1518](https://www.kaggle.com/abdulmalik1518) on Kaggle
 - OpenAI for GPT-4o-mini LLM
 - LlamaIndex for agent framework
 - FastAPI for robust API framework

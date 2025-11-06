@@ -1,2 +1,7 @@
 .venv
 .env
+
+# Frontend (separate build - not needed in backend Docker image)
+frontend/
+# Other
+screenshots/
