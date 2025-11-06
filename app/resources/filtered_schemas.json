@@ -1,0 +1,199 @@
+{
+    "ror_report_source_digital_daily": {
+        "collection_description": "Contains monthly performance and billing records for individual digital advertising line items. Each row represents the data for one line item for a specific billing month.",
+        "fields": [
+            {
+                "field_name": "year",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The calendar year of the 'billing_period_name'. This is the primary field for filtering and aggregating data by year."
+            },
+            {
+                "field_name": "quarter",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The calendar quarter of the 'billing_period_name' (1-4). This is the primary field for filtering and aggregating data by quarter."
+            },
+            {
+                "field_name": "division",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "A derived field representing the high-level business segment (e.g., Local, National, PAG). It is created by searching for keywords within the 'order_team' field and should be considered the single source of truth for the division."
+            },
+            {
+                "field_name": "order_team",
+                "type": "STRING",   
+                "mode": "NULLABLE",
+                "field_description": "A specific sales team or market, likely a sub-group under a division, often based on geography (e.g., 'Local - Philadelphia', National - Chicago, Local - Multi Market - Miami etc.)."
+            },
+            {
+                "field_name": "advertiser_name",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "Specifies the advertiser or brand name being promoted, typically the company whose products or services are advertised."
+            },
+            {
+                "field_name": "agency_name",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The name of the advertising agency placing the ad buy on behalf of the advertiser."
+            },
+            {
+                "field_name": "conexo_partners",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The specific Demand-Side Platform (DSP) or technology partner used to buy advertising on third-party websites. A value different from 'other' indicates a third-party buy."
+            },
+            {
+                "field_name": "order_id",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The unique identifier for a specific advertising contract or order. Acts as a primary key to group all parts of a single campaign."
+            },
+            {
+                "field_name": "advertiser_id",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The unique numerical identifier for the advertiser, a more reliable key than the advertiser's name."
+            },
+            {
+                "field_name": "order_name",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "A human-readable, descriptive name for the advertising campaign, often containing a summary of the year, client, and duration."
+            },
+            {
+                "field_name": "advertiser_industry",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The business vertical or sector of the advertiser (e.g., 'Health Care')."
+            },
+            {
+                "field_name": "Order_Type",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The sales channel for the order, indicating if it was a direct buy or through an agency (e.g., 'Direct Buy - Direct to Advertiser')."
+            },
+            {
+                "field_name": "agency_id",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The unique identifier for the advertising agency."
+            },
+            {
+                "field_name": "order_start_date",
+                "type": "DATE",
+                "mode": "NULLABLE",
+                "field_description": "The first day any ad in the entire order can run."
+            },
+            {
+                "field_name": "order_end_date",
+                "type": "DATE",
+                "mode": "NULLABLE",
+                "field_description": "The last day any ad in the entire order can run."
+            },
+            {
+                "field_name": "product_name",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "Defines the advertising channel and format. It specifies HOW and WHERE the ad is delivered (e.g., 'CONEXO - Display', 'Video - Run of Univision Network', 'Social LOCAL')."
+            },
+            {
+                "field_name": "advanced_ad_unit",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "A derived field specifying a premium feature, placement, or sponsorship. It is extracted by searching for keywords within the 'product_name' field."
+            },
+            {
+                "field_name": "inventory_source",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The origin of the ad space (inventory), such as 'Conexo' (third-party network) or 'O&O' (Owned and Operated properties).  It is set to 'O&O' if value of 'conexo_partner' is 'other' otherwise it is set to 'Conexo'"
+            },
+            {
+                "field_name": "format_type",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The creative format of the advertisement or strategy (e.g., 'Audience Extension', 'Social', 'Video')."
+            },
+            {
+                "field_name": "line_item_id",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The unique identifier for a specific line within an order, representing the most granular level of the buy."
+            },
+            {
+                "field_name": "line_item_name",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The descriptive name for the specific line item, often corresponding to the product."
+            },
+            {
+                "field_name": "line_item_start_date",
+                "type": "DATE",
+                "mode": "NULLABLE",
+                "field_description": "The start date for the specific line item only."
+            },
+            {
+                "field_name": "line_item_end_date",
+                "type": "DATE",
+                "mode": "NULLABLE",
+                "field_description": "The end date for the specific line item only."
+            },
+            {
+                "field_name": "contracted_impressions",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The total number of ad impressions promised in the contract for the entire lifetime of the line item."
+            },
+            {
+                "field_name": "Impressions_Booked_This_Period",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The expected number of impressions that should be reached in the given month (billing_period_name), serving as a monthly goal or pacing target."
+            },
+            {
+                "field_name": "_1p_delivered_impressions",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The actual number of impressions that were delivered in the given month (billing_period_name), as measured by first-party systems."
+            },
+            {
+                "field_name": "billing_period_name",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "The year and month for which the financial and performance data in this row is being reported (e.g., '2021-09'). This will be in the format 'YYYY-MM'. It will have to be parsed as date for any time-based calculations (e.g. PARSE_DATE('%Y-%m', billing_period_name))."
+            },
+            {
+                "field_name": "invoice_id",
+                "type": "INTEGER",
+                "mode": "NULLABLE",
+                "field_description": "The unique identifier that links this line item's financial data to an official invoice."
+            },
+            {
+                "field_name": "gross_revenue",
+                "type": "FLOAT",
+                "mode": "NULLABLE",
+                "field_description": "The primary field for all gross revenue calculations. IMPORTANT: This field contains both actual and estimated data. For billing periods in the past, it represents actual recognized revenue. For the current and future billing periods, it contains estimated revenue. To calculate ACTUAL gross revenue, queries MUST filter for past time periods using the 'billing_period_name' (format 'YYYY-MM')."
+            },
+            {
+                "field_name": "net_revenue",
+                "type": "FLOAT",
+                "mode": "NULLABLE",
+                "field_description": "The primary field for all net revenue calculations (gross revenue minus agency commissions/costs etc.). IMPORTANT: This field contains both actual and estimated data. For billing periods in the past, it represents actual recognized revenue. For the current and future billing periods, it contains estimated revenue. To calculate ACTUAL net revenue, queries MUST filter for past time periods using the 'billing_period_name' (format 'YYYY-MM')."
+            },
+            {
+                "field_name": "target_type",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "A high-level category that classifies the audience targeting method used for a line item. This is the primary field for all questions about targeting strategy. The possible values are: 'Demo' (standard demographic targeting), 'DAT - Age/Gender' (data-driven age/gender targeting), 'DAT - Other Audience' (data-driven interest/behavioral targeting), 'YT Age/Gender' (specific age/gender targeting on YouTube), and 'P2+' (broad, untargeted delivery). For a query like 'what line items are targeting youtube age gender', the correct SQL filter is `WHERE target_type = 'YT Age/Gender'`."
+            },
+            {
+                "field_name": "Upfront_Scatter",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "field_description": "Indicates the media buying strategy for the campaign. The value 'Upfront' signifies a planned, long-term purchase of ad inventory, typically made well in advance. The value 'Scatter' signifies an ad-hoc, short-term purchase made closer to the campaign's start date."
+            }
+        ]
+    }
+}

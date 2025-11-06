@@ -1,0 +1,15 @@
+.app {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .app {
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+
