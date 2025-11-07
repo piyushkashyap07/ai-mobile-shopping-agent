@@ -4,6 +4,8 @@ AI-powered mobile phone shopping assistant that helps customers discover, compar
 
 **Repository**: [https://github.com/piyushkashyap07/ai-mobile-shopping-agent](https://github.com/piyushkashyap07/ai-mobile-shopping-agent)
 
+**🌐 Live Demo**: [https://frontend-gamma-six-28.vercel.app/](https://frontend-gamma-six-28.vercel.app/)
+
 ## 📸 Screenshots
 
 ### Landing Page
